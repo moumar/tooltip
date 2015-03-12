@@ -1,0 +1,137 @@
+body {
+	background: #999;
+}
+
+@font-face {
+  font-family: 'Hn tlcn';
+  src: url('https://daks2k3a4ib2z.cloudfront.net/54f1eb2255bdc08b385064c9/54f1f6f955bdc08b3850668a_hn-tlcn.woff') format('woff');
+  font-weight: 400;
+  font-style: normal;
+}
+
+.tooltip-container {
+  position: absolute;
+  left: 75px;
+  top: 150px;
+  width: 374px;
+  height: 300px;
+}
+
+.fleche-tooltip {
+  position: absolute;
+  left: -18px;
+  top: calc(50% + 18px);
+  width: 0px;
+  height: 0px;
+  border-top: 30px solid transparent;
+  border-right: 18px solid rgba(255, 255, 255, 0.90);
+  border-bottom: 30px solid transparent;
+  -webkit-transform: translate(0px, -30%);
+  -ms-transform: translate(0px, -30%);
+  transform: translate(0px, -30%);
+}
+
+.fond-tooltip {
+  height: 100%;
+  padding: 30px;
+  background-color: rgba(255, 255, 255, 0.90);
+}
+
+.text-tooltip {
+  display: inline-block;
+  font-family: Arial, 'Helvetica Neue', Helvetica, sans-serif;
+  color: black;
+  font-size: 14px;
+  font-weight: 400;
+
+}
+.text-overflow {
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  width: calc(100% - 32px);
+  overflow: hidden;
+}
+
+.text-tooltip.titre {
+  font-family:'Hn tlcn', sans-serif;
+  font-size: 20px;
+  line-height: 26px;
+}
+
+.text-tooltip.artiste {
+  overflow-x: hidden;
+  overflow-y: hidden;
+  font-family:'Hn tlcn', sans-serif;
+  font-size: 20px;
+  line-height: 26px;
+}
+.text-tooltip.semaines {
+  margin-top: 4px;
+  font-weight: 400;
+}
+.tooltip-part1 {
+  margin-bottom: 15px;
+  padding-bottom: 12px;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.29);
+}
+.pill {
+  display: inline-block;
+  margin-right: 10px;
+  margin-bottom: 8px;
+  padding: 5px 13px;
+  border-radius: 15px;
+  background-color: black;
+  font-family: Arial, 'Helvetica Neue', Helvetica, sans-serif;
+  font-size: 13px;
+  font-weight: 400;
+  color: white;
+}
+.pill.position {
+  width: 30px;
+  margin-left: 8px;
+  padding-right: 0px;
+  padding-left: 0px;
+  text-align: center;
+}
+.picto-tooltip {
+  display: inline-block;
+  width: 16px;
+  height: 16px;
+  background-image: url(https://d3e54v103j8qbb.cloudfront.net/img/example-bg.png);
+  background-position: 50% 50%;
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+.picto-tooltip.titre {
+  margin-right: 12px;
+  background-image: url(http://uploads.webflow.com/54f1eb2255bdc08b385064c9/54f5956bb114d99a25b935d3_icon-titre.png);
+}
+.picto-tooltip.artiste {
+  margin-right: 12px;
+  background-image: url(http://uploads.webflow.com/54f1eb2255bdc08b385064c9/54f5969b4d01fc98250b2913_icon-artiste.png);
+}
+.picto-tooltip.arrow {
+  position: relative;
+  top: 6px;
+  margin-right: 8px;
+  background-image: url(http://uploads.webflow.com/54f1eb2255bdc08b385064c9/54f596fa4ffda8cb19ce7140_icon-arrow.png);
+  background-position: 50% 100%;
+}
+.semaine {
+  width: 14px;
+  height: 14px;
+  margin-top: 5px;
+  margin-right: 5px;
+  float: left;
+  background-color: black;
+}
+.semaine-container {
+  width: 190px;
+}
+.vertical-center {
+  position: relative;
+  top: 50%;
+  -webkit-transform: translate(0px, -50%);
+  -ms-transform: translate(0px, -50%);
+  transform: translate(0px, -50%);
+}
