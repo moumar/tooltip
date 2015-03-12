@@ -9,26 +9,30 @@ body {
   font-style: normal;
 }
 
-.tooltip-container {
+.tooltip {
   position: absolute;
   left: 75px;
   top: 150px;
   width: 374px;
   height: 300px;
+  transform: translateX(18px)
+}
+
+.tooltip-container {
+  margin-top: -50%;
+  position: relative;
 }
 
 .fleche-tooltip {
   position: absolute;
   left: -18px;
-  top: calc(50% + 18px);
+  top: calc(50% - 9px);
   width: 0px;
   height: 0px;
   border-top: 30px solid transparent;
   border-right: 18px solid rgba(255, 255, 255, 0.90);
   border-bottom: 30px solid transparent;
-  -webkit-transform: translate(0px, -30%);
-  -ms-transform: translate(0px, -30%);
-  transform: translate(0px, -30%);
+  transform: translate(0px, -15px);
 }
 
 .fond-tooltip {
@@ -96,7 +100,7 @@ body {
 .picto-tooltip {
   display: inline-block;
   width: 16px;
-  height: 16px;
+  height: 26px;
   background-image: url(https://d3e54v103j8qbb.cloudfront.net/img/example-bg.png);
   background-position: 50% 50%;
   background-size: contain;
