@@ -1,5 +1,19 @@
 body {
-	background: #999;
+    background: #999;
+    margin: 0;
+    padding: 0;
+}
+
+.test-zone {
+  position: absolute;
+  width: 200px;
+  height: 200px;
+  background-color: #BBB;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  line-height: 200px;
+  text-align: center;
 }
 
 @font-face {
@@ -11,33 +25,37 @@ body {
 
 .tooltip {
   position: absolute;
-  left: 75px;
-  top: 150px;
   width: 374px;
   height: 300px;
-  transform: translateX(18px)
+  pointer-events: none;
 }
 
-.tooltip-container {
-  margin-top: -50%;
-  position: relative;
+.tooltip.bottom {
+  transform: translate(-50%, 9px);
+}
+
+.tooltip.right {
+  transform: translate(18px, -50%)
 }
 
 .fleche-tooltip {
   position: absolute;
-  left: -18px;
-  top: calc(50% - 9px);
   width: 0px;
   height: 0px;
+}
+
+.tooltip .fleche-tooltip {
+  left: -18px;
+  top: calc(50% - 15px);
   border-top: 30px solid transparent;
   border-right: 18px solid rgba(255, 255, 255, 0.90);
   border-bottom: 30px solid transparent;
-  transform: translate(0px, -15px);
+  transform: translateY(-15px);
 }
 
 .fond-tooltip {
   height: 100%;
-  padding: 30px;
+  width: 100%;
   background-color: rgba(255, 255, 255, 0.90);
 }
 
@@ -63,16 +81,17 @@ body {
 }
 
 .text-tooltip.artiste {
-  overflow-x: hidden;
-  overflow-y: hidden;
+  overflow: hidden;
   font-family:'Hn tlcn', sans-serif;
   font-size: 20px;
   line-height: 26px;
 }
+
 .text-tooltip.semaines {
   margin-top: 4px;
   font-weight: 400;
 }
+
 .tooltip-part1 {
   margin-bottom: 15px;
   padding-bottom: 12px;
@@ -105,13 +124,12 @@ body {
   background-position: 50% 50%;
   background-size: contain;
   background-repeat: no-repeat;
+  margin-right: 12px;
 }
 .picto-tooltip.titre {
-  margin-right: 12px;
   background-image: url(http://uploads.webflow.com/54f1eb2255bdc08b385064c9/54f5956bb114d99a25b935d3_icon-titre.png);
 }
 .picto-tooltip.artiste {
-  margin-right: 12px;
   background-image: url(http://uploads.webflow.com/54f1eb2255bdc08b385064c9/54f5969b4d01fc98250b2913_icon-artiste.png);
 }
 .picto-tooltip.arrow {
@@ -133,6 +151,7 @@ body {
   width: 190px;
 }
 .vertical-center {
+  padding: 0 30px;
   position: relative;
   top: 50%;
   -webkit-transform: translate(0px, -50%);
