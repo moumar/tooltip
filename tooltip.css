@@ -30,27 +30,57 @@ body {
   pointer-events: none;
 }
 
-.tooltip.bottom {
-  transform: translate(-50%, 9px);
-}
-
 .tooltip.right {
   transform: translate(18px, -50%)
 }
 
-.fleche-tooltip {
-  position: absolute;
-  width: 0px;
-  height: 0px;
+.tooltip.left {
+  transform: translate(-100%, -50%) translateX(-18px);
 }
 
-.tooltip .fleche-tooltip {
+.tooltip.bottom {
+  transform: translate(-50%, 18px);
+}
+
+.tooltip.top {
+  transform: translate(-50%, -100%) translateY(-18px);
+}
+
+.fleche-tooltip {
+  position: absolute;
+  width: 0;
+  height: 0;
+  border-style: solid;
+}
+
+.tooltip.right .fleche-tooltip {
   left: -18px;
-  top: calc(50% - 15px);
-  border-top: 30px solid transparent;
-  border-right: 18px solid rgba(255, 255, 255, 0.90);
-  border-bottom: 30px solid transparent;
-  transform: translateY(-15px);
+  top: calc(50% - 30px);
+  border-width: 30px 18px 30px 0;
+  border-color: transparent rgba(255,255,255,0.90) transparent transparent;
+}
+
+.tooltip.left .fleche-tooltip {
+  left: 100%;
+  top: calc(50% - 30px);
+  border-width: 30px 0 30px 18px;
+  border-color: transparent transparent transparent rgba(255,255,255,0.9)
+}
+
+.tooltip.bottom .fleche-tooltip {
+  left: calc(50% - 30px);
+  top: -18px;
+  border-style: solid;
+  border-width: 0 30px 18px 30px;
+  border-color: transparent transparent rgba(255,255,255,0.9) transparent;
+}
+
+.tooltip.top .fleche-tooltip {
+  left: calc(50% - 30px);
+  top: 100%;
+  border-style: solid;
+  border-width: 18px 30px 0 30px;
+  border-color: rgba(255,255,255,0.9) transparent transparent transparent;
 }
 
 .fond-tooltip {
@@ -81,7 +111,6 @@ body {
 }
 
 .text-tooltip.artiste {
-  overflow: hidden;
   font-family:'Hn tlcn', sans-serif;
   font-size: 20px;
   line-height: 26px;
@@ -109,6 +138,7 @@ body {
   font-weight: 400;
   color: white;
 }
+
 .pill.position {
   width: 30px;
   margin-left: 8px;
@@ -116,6 +146,7 @@ body {
   padding-left: 0px;
   text-align: center;
 }
+
 .picto-tooltip {
   display: inline-block;
   width: 16px;
